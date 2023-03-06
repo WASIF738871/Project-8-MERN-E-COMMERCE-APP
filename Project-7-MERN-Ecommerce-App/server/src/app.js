@@ -7,7 +7,8 @@ const {PORT} = process.env;
 
 //importing custom node modules
 import "./db/connection.js";
-import productRouter from './routes/productRoute.js'
+import productRouter from './routes/productRouter.js'
+import usersRouter from './routes/userRouter.js'
 // instance of express app
 const app = express();
 
@@ -15,6 +16,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use('/', productRouter)
+app.use('/', usersRouter)
 
 
 // app listening

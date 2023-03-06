@@ -1,7 +1,7 @@
 
 export const getData = ()=>async (dispatch) => {
     try {
-        const data = await fetch("http://localhost:8000/product/api1/getProduct", {
+        const data = await fetch("/product/api1/getProduct", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
